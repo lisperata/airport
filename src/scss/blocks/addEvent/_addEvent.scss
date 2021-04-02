@@ -1,0 +1,59 @@
+.new-event {
+  margin-top: 40px;
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    :first-child {
+      margin-top: 0;
+    }
+    input, label, select {
+      font-size: 24px;
+      border-radius: 5px;
+    }
+    label {
+      margin: 0 15px 0 5px;
+      cursor: pointer;
+    }
+    select {
+      min-width: 300px;
+      cursor: pointer;
+    }
+  }
+  &__value {
+    min-width: 300px;
+    cursor: text;
+  }
+  &__title {
+    min-width: 30%;
+    font-size: 24px;
+  }
+  &__btn {
+    padding: 5px 40px;
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+  }
+}
+.error-already-booked {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  color: rgb(173, 6, 6);
+  font-size: 20px;
+  &__close {
+    font-size: 35px;
+    cursor: pointer;
+  }
+}
+
+.red {  
+  background-color: rgba(250, 6, 6, 0.3);
+  padding: 15px 0;
+}

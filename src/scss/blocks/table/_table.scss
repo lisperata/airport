@@ -1,0 +1,29 @@
+.table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  td, th{
+    padding: 9px; 
+    border: 1px solid #000000; 
+    text-align: center;
+    font-size: 23px;
+    width: 16%;
+    
+  }
+  th {
+    background-color: $silv;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.delete-event {
+  cursor: pointer;
+}
+
+.green {
+  background-color: rgba(31, 237, 38, 0.4);
+}

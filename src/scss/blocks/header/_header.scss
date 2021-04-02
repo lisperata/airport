@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  h1 {
+    font-size: 37px;
+  }
+  &__edit-calendar {
+    &_filter {
+      font-size: 24px;
+      padding: 3px;
+      cursor: pointer;
+      border: 1px solid #000000;
+      border-radius: 5px;
+    }
+    &_add {
+      background-color: $silv;
+      padding: 3px 15px;
+    }
+  }
+}

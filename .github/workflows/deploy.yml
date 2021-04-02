@@ -1,0 +1,30 @@
+name: CD
+
+on: 
+  push:
+    branches:    
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install
+      run: npm i
+    - name: Build 
+      run: gulp copy-html build-sass build-js
+    - name: Bundle
+      run: mkdir ./out && mkdir ./out/airport && mv dist/js ./out/airport && mv dist/css ./out/airport && mv dist/index.html ./out/airport
+      
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.DEPLOY_TOKEN }}
+        external_repository: lisperata/lisperata.github.io
+        publish_dir: ./out
+        publish_branch: master
+        keep_files: true
